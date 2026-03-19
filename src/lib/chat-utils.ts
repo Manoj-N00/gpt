@@ -9,7 +9,8 @@ export interface UploadedFile {
   extractedText?: string;
   url?: string;
   size?: number;
-  type?: string;
+  type: string;
+  
 }
 
 export function parseUploadedFiles(filesInput: any): UploadedFile[] {
