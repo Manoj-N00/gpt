@@ -8,7 +8,7 @@ export default clerkMiddleware(async (auth, req) => {
 
   // If user is logged in and trying to access the root, redirect to /chat
   if (userId && new URL(req.url).pathname === "/") {
-    return NextResponse.redirect(new URL("/chat", req.url));
+    return NextResponse.redirect(new URL("/chats", req.url));
   }
 
   if (isProtectedRoute(req) && !userId) {
