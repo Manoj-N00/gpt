@@ -25,4 +25,4 @@ const MessageSchema = new Schema(
 );
 
 export default mongoose.models.ChatMessage ||
-  db.model("ChatMessage", MessageSchema);
+  db.model("ChatMessages", MessageSchema);
