@@ -12,7 +12,7 @@ export default clerkMiddleware(async (auth, req) => {
   }
 
   if (isProtectedRoute(req) && !userId) {
-    const signInUrl = new URL("/sign-in", req.url);
+    const signInUrl = new URL("/sign-up", req.body.url);
     return NextResponse.redirect(signInUrl);
   }
 
