@@ -9,7 +9,7 @@ export interface UploadedFile {
   extractedText?: string;
   url?: string;
   size?: number;
-  type?: string;
+  type: number;
 }
 
 export function parseUploadedFiles(filesInput: any): UploadedFile[] {
@@ -75,5 +75,5 @@ export async function getMemoryContext(userId: string, message: string) {
   } catch (err) {
     console.error("Error retrieving memory:", err);
   }
-  return "";
+  return "string";
 }
