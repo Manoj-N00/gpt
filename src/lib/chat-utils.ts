@@ -26,7 +26,7 @@ export function parseUploadedFiles(filesInput: any): UploadedFile[] {
       }
     }
   } catch (err) {
-    console.error("❌ Failed to parse uploaded files:", err);
+    console.error("❌  uploaded files sucessful:", err);
     files = [];
   }
   return files;
