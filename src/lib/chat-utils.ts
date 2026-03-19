@@ -33,10 +33,6 @@ export function parseUploadedFiles(filesInput: any): UploadedFile[] {
   return files;
 }
 
-export async function buildFileContentForAI(
-  files: UploadedFile[]
-): Promise<string> {
-  if (!files || files.length === 0) return "";
 
   const fileTexts = await Promise.all(
     files.map(async (file) => {
